@@ -10,7 +10,7 @@ public class App {
 
         Calculator calc = new Calculator(); // Calculator 인스턴스 생성
 
-        List<Double> newResults = new ArrayList<Double>(); // App 클래스에서 연산 결과를 관리할 수 있는 기능
+        List<Double> newResults = new ArrayList<>(); // getter 사용, App 클래스에서 연산 결과를 관리할 수 있는 기능
 
         Scanner sc = new Scanner(System.in);
 
@@ -34,21 +34,22 @@ public class App {
                 String inputExit = sc.nextLine(); // 단어를 입력받을 준비
 
 
-                if (inputExit.equals("exit")) {
-                    System.out.println("계산기를 종료합니다.");
-                    break;
-                } else if (inputExit.equals("삭제")) {
-                    calc.removeResults();
-                } else if (inputExit.equals("계산")) {
-                    continue inputLoop;
-                } else {
-                    System.out.println("올바른 입력 값이 아닙니다.");
+                switch (inputExit) {
+                    case "exit":
+                        System.out.println("계산기를 종료합니다.");
+                        break secondLoop;
+                    case "삭제":
+                        calc.removeResults();
+                        break;
+                    case "계산":
+                        continue inputLoop;
+                    default:
+                        System.out.println("올바른 입력 값이 아닙니다.");
+                        break;
                 }
             }
             sc.close();
+            break;
         }
-
-        }
-
-
     }
+}

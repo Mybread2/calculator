@@ -6,15 +6,7 @@ import java.util.List;
 
 public class Calculator {
 
-    private List<Double> results = new ArrayList<Double>(); // 연산 결과들을 저장하는 컬렉션 타입 필드
-
-    public List<Double> getResults() { // getter 메서드
-        return this.results;           // results는 연산 결과들을 저장하는 리스트이고 getResults()는 그 리스트를 읽어올 수 있게 해주는 메서드
-    }
-
-    public void setResults(List<Double> results) { // setter 메서드
-        this.results = results;
-    }
+    private List<Double> results = new ArrayList<>(); // 연산 결과들을 저장하는 컬렉션 타입 필드
 
     public void calculate(int positiveInteger1, int positiveInteger2, char operator) {
         // App에서 입력받은 데이터 3개를 가져오는 기능
@@ -62,6 +54,17 @@ public class Calculator {
                                  // 그 result 값을 results 리스트에 추가하겠다는 의미
         }
     }
+
+
+    public List<Double> getResults() { // getter 메서드
+        return this.results;           // results는 연산 결과들을 저장하는 리스트이고 getResults()는 그 리스트를 읽어올 수 있게 해주는 메서드
+    }
+
+    public void setResults(List<Double> results) { // setter 메서드
+        this.results = results;
+    }
+
+
         public void removeResults() { // 기록된 값 맨 첫 번째 삭제하는 메서드
              if(!results.isEmpty()) {
                  double removed = results.remove(0);
@@ -72,7 +75,7 @@ public class Calculator {
              } else {
                  System.out.println("삭제할 연산 결과가 존재하지 않습니다.");
              }
-    }
+        }
     }
 
 
