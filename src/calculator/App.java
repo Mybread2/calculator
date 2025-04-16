@@ -8,8 +8,7 @@ public class App {
         Scanner sc = new Scanner(System.in);
 
         while (true) {
-            boolean possible = true; // 만약 나눗셈에서 2번째 양의 정수가 0일 때 에러가 나기 때문에 이를 방지하기 위해 설정했다.
-                                     // 또한, 아래 코드에서 0을 입력받았을 때, false로 바뀌기 때문에
+            boolean possible = true; // boolean은 연산 처리와 오류 방지 로직을 깔끔하게 제어하기 위한 장치로써 사용했다.
                                      // 다음 계산시에 true로 다시 바꿔주기 위해 반복문 맨 윗줄에 적어주었다.
 
             System.out.print("첫 번째 양의 정수를 입력하세요: ");
@@ -57,8 +56,8 @@ public class App {
 
             System.out.print("엔터키를 누르면 다음 계산으로 넘어갑니다. (exit 입력 시 종료)");
             sc.nextLine(); // 엔터키를 통해 다음 계산으로 부드럽게 넘어갈 수 있다.
-            String exit = sc.nextLine(); // 단어를 입력받을 준비
-            if (exit.equals("exit")){
+            String inputExit = sc.nextLine(); // 단어를 입력받을 준비
+            if (inputExit.equals("exit")){
                 System.out.println("계산기를 종료합니다.");
                 break;
             }
