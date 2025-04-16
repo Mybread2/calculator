@@ -39,6 +39,8 @@ public class App {
                 case '/':
                     if (positiveInteger2 == 0) {
                         System.out.println("0으로 나눌 수 없습니다.");
+                        System.out.println(); // 줄을 한 칸 띄어주기 위해
+                        continue; // 두 번째 양의 정수가 0이더라도 계산결과를 나타내주는 것을 방지하기 위해 현재 반복을 건너뛰게 해주었다.
                     } else {
                         result = (double) positiveInteger1 / positiveInteger2;
                     }
