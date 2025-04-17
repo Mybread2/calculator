@@ -8,6 +8,7 @@ public class Calculator {
 
     private List<Double> results = new ArrayList<>(); // 연산 결과들을 저장하는 컬렉션 타입 필드
 
+
     public void calculate(int positiveInteger1, int positiveInteger2, char operator) {
         // App에서 입력받은 데이터 3개를 가져오는 기능
 
@@ -41,8 +42,6 @@ public class Calculator {
                 break;
 
             default:
-                System.out.println("올바른 사칙연산 기호를 입력해주세요.");
-                System.out.println(); // 줄을 한 칸 띄어주기 위해
                 possible = false;
         }
 
@@ -66,11 +65,13 @@ public class Calculator {
 
 
         public void removeResults() { // 기록된 값 맨 첫 번째 삭제하는 메서드
-             if(!results.isEmpty()) {
+             if (!results.isEmpty()) {
                  double removed = results.remove(0);
+
                  System.out.println("삭제된 값 : " + removed);
-                 for(int i=0; i<results.size(); i++) {
-                     System.out.println((i+1) + "번째 결과값 : " + results.get(i));
+
+                 for (int i = 0; i < results.size(); i++) {
+                     System.out.println((i + 1) + "번째 결과값 : " + results.get(i));
                  }
              } else {
                  System.out.println("삭제할 연산 결과가 존재하지 않습니다.");

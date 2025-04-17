@@ -24,6 +24,11 @@ public class App {
             System.out.print("사칙연산 기호를 입력하세요 : ");
             char operator = sc.next().charAt(0);
             sc.nextLine();
+            if(operator != '+' && operator != '-' && operator != '*' && operator != '/') {
+                System.out.println("올바른 사칙연산 기호를 입력해주세요.");
+                System.out.println();
+                continue;
+            }
 
             calc.calculate(positiveInteger1, positiveInteger2, operator); // 생성한 인스턴스 활용
 
@@ -50,6 +55,7 @@ public class App {
             }
             sc.close();
             break;
+
         }
     }
 }
