@@ -18,6 +18,7 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
@@ -83,6 +84,7 @@
       <workItem from="1744765869977" duration="24958000" />
       <workItem from="1744801244220" duration="3734000" />
       <workItem from="1744804989737" duration="378000" />
+      <workItem from="1744805379731" duration="616000" />
     </task>
     <task id="LOCAL-00001" summary="1단계 계산기 완료">
       <option name="closed" value="true" />
@@ -132,7 +134,23 @@
       <option name="project" value="LOCAL" />
       <updated>1744805126843</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="2단계 계산기 구현 완료&#10;&#10;사칙연산 기호를 잘못 입력했을때 다시 입력받는 곳으로 이동하는 것 추가 필요&#10;&#10;App 클래스에서 게터 및 세터를 사용하여 현재까지 저장된 리스트들을 관리하거나 표현해주는 기능 추가 필요">
+      <option name="closed" value="true" />
+      <created>1744805496754</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1744805496754</updated>
+    </task>
+    <task id="LOCAL-00008" summary="2단계 계산기 구현 완료&#10;&#10;사칙연산 기호를 잘못 입력했을때 다시 입력받는 곳으로 이동하는 것 추가 필요&#10;&#10;App 클래스에서 게터 및 세터를 사용하여 현재까지 저장된 리스트들을 관리하거나 표현해주는 기능 추가 필요">
+      <option name="closed" value="true" />
+      <created>1744805625068</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1744805625068</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
