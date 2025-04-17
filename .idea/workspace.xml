@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6476d23-9c32-4f09-b7a2-76e5a962d572" name="Changes" comment="2단계 계산기 구현 완료&#10;&#10;게터 및 세터 메서드를 사용하여 삭제 메소드 수정">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/calculator/calculator/Calculator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/calculator/calculator/Calculator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/calculator/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/calculator/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/calculator/Calculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/calculator/Calculator.java" afterDir="false" />
+    <list default="true" id="e6476d23-9c32-4f09-b7a2-76e5a962d572" name="Changes" comment="2단계 계산기 구현 완료&#10;&#10;게터 및 세터 메서드를 사용할 수 있도록 구현 완료">
+      <change beforePath="$PROJECT_DIR$/out/production/calculator/calculator/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/calculator/calculator/App.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +104,7 @@
       <workItem from="1744804989737" duration="378000" />
       <workItem from="1744805379731" duration="616000" />
       <workItem from="1744849063476" duration="3823000" />
-      <workItem from="1744852996025" duration="1372000" />
+      <workItem from="1744852996025" duration="1703000" />
     </task>
     <task id="LOCAL-00001" summary="1단계 계산기 완료">
       <option name="closed" value="true" />
@@ -197,7 +194,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744852789324</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="2단계 계산기 구현 완료&#10;&#10;게터 및 세터 메서드를 사용할 수 있도록 구현 완료">
+      <option name="closed" value="true" />
+      <created>1744854657178</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1744854657178</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,7 +226,8 @@
     <MESSAGE value="2단계 계산기 구현 완료&#10;&#10;사칙연산 기호를 잘못 입력했을때 다시 입력받는 곳으로 이동하는 것 추가 필요&#10;&#10;App 클래스에서 게터 및 세터를 사용하여 현재까지 저장된 리스트들을 관리하거나 표현해주는 기능 추가 필요" />
     <MESSAGE value="2단계 계산기 구현 완료&#10;&#10;App 클래스에서 게터 및 세터를 사용하여 현재까지 저장된 리스트들을 관리하거나 표현해주는 기능 추가 필요&#10;삭제 메서드를 새로 만들어보자" />
     <MESSAGE value="2단계 계산기 구현 완료&#10;&#10;게터 및 세터 메서드를 사용하여 삭제 메소드 수정" />
-    <option name="LAST_COMMIT_MESSAGE" value="2단계 계산기 구현 완료&#10;&#10;게터 및 세터 메서드를 사용하여 삭제 메소드 수정" />
+    <MESSAGE value="2단계 계산기 구현 완료&#10;&#10;게터 및 세터 메서드를 사용할 수 있도록 구현 완료" />
+    <option name="LAST_COMMIT_MESSAGE" value="2단계 계산기 구현 완료&#10;&#10;게터 및 세터 메서드를 사용할 수 있도록 구현 완료" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

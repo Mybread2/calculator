@@ -60,7 +60,7 @@ public class Calculator {
 
     public void removeResults() {
         if (!results.isEmpty()) {
-            double removed = results.remove(0);
+            double removed = results.removeFirst();
             System.out.println("삭제된 값 : " + removed);
             System.out.println();
 
