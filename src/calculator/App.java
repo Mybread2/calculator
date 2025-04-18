@@ -6,10 +6,9 @@ import java.util.Scanner;
 public class App {
 
     public static void main(String[] args) {
-
-        Calculator calc = new Calculator(); // Calculator 인스턴스 생성
-
         Scanner sc = new Scanner(System.in);
+        ResultHistory calc = new ResultHistory(); // Calculator 인스턴스 생성
+        OperationExecutor executor = new OperationExecutor(calc);
 
         inputLoop:
         while (true) {
@@ -22,13 +21,11 @@ public class App {
             System.out.print("사칙연산 기호를 입력하세요 : ");
             char operator = sc.next().charAt(0);
             sc.nextLine();
-            if (operator != '+' && operator != '-' && operator != '*' && operator != '/') {
-                System.out.println("올바른 사칙연산 기호를 입력해주세요.");
-                System.out.println();
-                continue;
-            }
 
-            calc.calculate(positiveInteger1, positiveInteger2, operator); // 생성한 인스턴스 활용
+            // 연산 기능
+            double result = executor.execute(positiveInteger1, positiveInteger2, operator);
+            System.out.println("계산 결과 : " + result);
+
 
             List<Double> newResults = calc.getResults(); // 계산 후 업데이트된 결과 리스트 가져오기
             calc.setResults(newResults); // 업데이트된 리스트 설정
