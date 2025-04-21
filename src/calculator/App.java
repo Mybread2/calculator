@@ -23,7 +23,7 @@ public class App {
             sc.nextLine(); // 버퍼 비우기
 
             // 연산 기능
-            double result = executor.execute(inputNumber1,inputNumber2, operator);
+            double result = executor.execute(inputNumber1, inputNumber2, operator);
             System.out.println("계산 결과 : " + result);
 
 
@@ -32,12 +32,12 @@ public class App {
 
             secondLoop:
             while (true) {
-                System.out.println("다음 계산을 하고싶다면 '계산'을 입력 / 삭제를 원하면 '삭제'를 입력 / 계산기를 종료하고싶다면 'exit' 입력");
+                System.out.println("다음 계산을 하고싶다면 '계산'을 입력 / 삭제를 원하면 '삭제'를 입력 / 데이터 조회를 원한다면 '조회'를 입력 / 계산기를 종료하고싶다면 '종료'를 입력해주세요");
 
                 String inputExit = sc.nextLine(); // 단어를 입력받을 준비
 
                 switch (inputExit) {
-                    case "exit":
+                    case "종료":
                         System.out.println("계산기를 종료합니다.");
                         break secondLoop;
                     case "삭제":
@@ -47,10 +47,27 @@ public class App {
                         break;
                     case "계산":
                         continue inputLoop;
-                    default:
-                        System.out.println("올바른 입력 값이 아닙니다.");
-                        break;
+                    case "조회":
+                        System.out.println("1. 전체 결과 조회");
+                        System.out.println("2. 특정 값보다 큰 결과 조회");
+                        System.out.print("1 또는 2를 입력해주세요.");
+                        String choice = sc.nextLine();
+
+                        switch (choice) {
+                            case "1":
+                                for (int i = 0; i < calc.getResults().size(); i++) {
+                                    System.out.println((i + 1) + "번째 결과: " + calc.getResults().get(i));
+                                }
+                                break;
+                            case "2":
+                                ResultFilter.resultFilter(calc.getResults());
+                                break;
+                            default:
+                                System.out.println("올바른 입력 값이 아닙니다.");
+                                break;
+                        }
                 }
+
             }
             sc.close();
             break;
