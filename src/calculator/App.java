@@ -8,24 +8,34 @@ public class App {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         ResultHistory calc = new ResultHistory(); // Calculator 인스턴스 생성
-        OperationExecutor<Integer> executor = new OperationExecutor<>(calc); // 제네릭을 사용하여 객체 생성
+        OperationExecutor<Double> executor = new OperationExecutor<>(calc); // 제네릭을 사용하여 객체 생성
 
         inputLoop:
         while (true) {
-            System.out.print("첫 번째 실수를 입력하세요: ");
-            int inputNumber1 = sc.nextInt();
+            System.out.print("첫 번째 실수를 입력하세요 : ");
+            double inputNumber1 = sc.nextDouble();
 
-            System.out.print("두 번째 실수를 입력하세요: ");
-            int inputNumber2 = sc.nextInt();
+            System.out.print("두 번째 실수를 입력하세요 : ");
+            double inputNumber2 = sc.nextDouble();
 
-            System.out.print("사칙연산 기호를 입력하세요 : ");
-            char operator = sc.next().charAt(0);
-            sc.nextLine(); // 버퍼 비우기
+            char operator;
 
-            // 연산 기능
-            double result = executor.execute(inputNumber1, inputNumber2, operator);
-            System.out.println("계산 결과 : " + result);
+            while (true) {
+                System.out.print("사칙연산 기호를 입력하세요 : ");
+                operator = sc.next().charAt(0);
+                sc.nextLine(); // 버퍼 비우기
 
+                // 유효한 연산자인지 확인
+                OperationExecutor.Operator op = OperationExecutor.Operator.fromSymbol(operator);
+                if (op == null) {
+                    System.out.println("지원하지 않는 연산자입니다. 다시 입력해주세요.");
+                    continue;
+                }
+
+                double result = executor.execute(inputNumber1, inputNumber2, operator);
+                System.out.println("계산 결과 : " + result);
+                break;
+            }
 
             List<Double> newResults = calc.getResults(); // 계산 후 업데이트된 결과 리스트 가져오기
             calc.setResults(newResults); // 업데이트된 리스트 설정
@@ -60,7 +70,7 @@ public class App {
                                 }
                                 break;
                             case "2":
-                                ResultFilter.resultFilter(calc.getResults());
+                                ResultFilter.resultFilter.filter(calc.getResults());
                                 break;
                             default:
                                 System.out.println("올바른 입력 값이 아닙니다.");

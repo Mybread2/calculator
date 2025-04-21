@@ -7,14 +7,14 @@ import java.util.Scanner;
 
 public interface ResultFilter {
 
-    void filter(List<Double> results);
+        void filter(List<Double> results);
 
-    static void resultFilter (List<Double> results) {
+        ResultFilter resultFilter = (results) -> {
         Scanner sc = new Scanner(System.in);
         System.out.print("기준값을 입력하세요: ");
         double filterNumber = sc.nextDouble();
 
-        List<Double> filtered = results.stream()
+        List<Double> filtered = results.stream() // 스트림 활용
                 .filter(num -> num > filterNumber)
                 .toList();
 
@@ -25,5 +25,5 @@ public interface ResultFilter {
             filtered.forEach(num -> System.out.print(num + "  /  "));
             System.out.println();
         }
-    }
+    };
 }
