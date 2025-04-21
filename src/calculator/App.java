@@ -8,22 +8,22 @@ public class App {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         ResultHistory calc = new ResultHistory(); // Calculator 인스턴스 생성
-        OperationExecutor executor = new OperationExecutor(calc);
+        OperationExecutor<Integer> executor = new OperationExecutor<>(calc); // 제네릭을 사용하여 객체 생성
 
         inputLoop:
         while (true) {
-            System.out.print("첫 번째 양의 정수를 입력하세요: ");
-            int positiveInteger1 = sc.nextInt();
+            System.out.print("첫 번째 실수를 입력하세요: ");
+            int inputNumber1 = sc.nextInt();
 
-            System.out.print("두 번째 양의 정수를 입력하세요: ");
-            int positiveInteger2 = sc.nextInt();
+            System.out.print("두 번째 실수를 입력하세요: ");
+            int inputNumber2 = sc.nextInt();
 
             System.out.print("사칙연산 기호를 입력하세요 : ");
             char operator = sc.next().charAt(0);
-            sc.nextLine();
+            sc.nextLine(); // 버퍼 비우기
 
             // 연산 기능
-            double result = executor.execute(positiveInteger1, positiveInteger2, operator);
+            double result = executor.execute(inputNumber1,inputNumber2, operator);
             System.out.println("계산 결과 : " + result);
 
 
