@@ -51,7 +51,7 @@ public class OperationExecutor<T extends Number> {
             return null;
         }
     }
-
+    
     public double execute(T num1, T num2, char operator) { // 두 실수와 연산자 기호를 입력받아 계산을 수행하고 결과를 반환하는 메서드
         double result = Objects.requireNonNull(Operator.fromSymbol(operator)).apply(num1, num2); // fromSymbol을 통해 operator(ADD,DIVIDE...)를 구하고, apply()를 호출해 Operator를 실행한 계산 결과를 얻는다.
         resultHistory.getResults().add(result); // 계산 결과를 ResultHistory에 저장
