@@ -38,7 +38,7 @@ public class App {
             List<Double> newResults = resultHistory.getResults(); // 계산 후 업데이트된 결과 리스트 가져오기
             resultHistory.setResults(newResults); // 업데이트된 리스트 설정
 
-            secondLoop:
+            commandLoop:
             while (true) {
                 System.out.println("다음 계산을 하고싶다면 '계산'을 입력 / 삭제를 원하면 '삭제'를 입력 / 데이터 조회를 원한다면 '조회'를 입력 / 계산기를 종료하고싶다면 '종료'를 입력해주세요");
 
@@ -47,7 +47,7 @@ public class App {
                 switch (inputExit) {
                     case "종료":
                         System.out.println("계산기를 종료합니다.");
-                        break secondLoop;
+                        break commandLoop;
                     case "삭제":
                         resultHistory.removeResults();
                         newResults = resultHistory.getResults(); // 삭제 후 업데이트된 결과 리스트 가져오기
