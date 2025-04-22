@@ -30,7 +30,7 @@ public class App {
                     double result = executor.execute(inputNumber1, inputNumber2, operator);
                     System.out.println("계산 결과 : " + result);
                     break;
-                } catch (IllegalArgumentException e) {
+                } catch (IllegalArgumentException | ArithmeticException e) {
                     System.out.println(e.getMessage());
                 }
             }
