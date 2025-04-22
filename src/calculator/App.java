@@ -7,8 +7,8 @@ public class App {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        ResultHistory calc = new ResultHistory(); // Calculator 인스턴스 생성
-        OperationExecutor<Double> executor = new OperationExecutor<>(calc); // 제네릭을 사용하여 객체 생성
+        ResultHistory resultHistory = new ResultHistory(); // Calculator 인스턴스 생성
+        OperationExecutor<Double> executor = new OperationExecutor<>(resultHistory); // 제네릭을 사용하여 객체 생성
 
         inputLoop:
         while (true) {
@@ -37,8 +37,8 @@ public class App {
                 break;
             }
 
-            List<Double> newResults = calc.getResults(); // 계산 후 업데이트된 결과 리스트 가져오기
-            calc.setResults(newResults); // 업데이트된 리스트 설정
+            List<Double> newResults = resultHistory.getResults(); // 계산 후 업데이트된 결과 리스트 가져오기
+            resultHistory.setResults(newResults); // 업데이트된 리스트 설정
 
             secondLoop:
             while (true) {
@@ -51,9 +51,9 @@ public class App {
                         System.out.println("계산기를 종료합니다.");
                         break secondLoop;
                     case "삭제":
-                        calc.removeResults();
-                        newResults = calc.getResults(); // 삭제 후 업데이트된 결과 리스트 가져오기
-                        calc.setResults(newResults); // 업데이트된 리스트 설정
+                        resultHistory.removeResults();
+                        newResults = resultHistory.getResults(); // 삭제 후 업데이트된 결과 리스트 가져오기
+                        resultHistory.setResults(newResults); // 업데이트된 리스트 설정
                         break;
                     case "계산":
                         continue inputLoop;
@@ -65,12 +65,12 @@ public class App {
 
                         switch (choice) {
                             case "1":
-                                for (int i = 0; i < calc.getResults().size(); i++) {
-                                    System.out.println((i + 1) + "번째 결과: " + calc.getResults().get(i));
+                                for (int i = 0; i < resultHistory.getResults().size(); i++) {
+                                    System.out.println((i + 1) + "번째 결과: " + resultHistory.getResults().get(i));
                                 }
                                 break;
                             case "2":
-                                ResultFilter.resultFilter.filter(calc.getResults());
+                                ResultFilter.resultFilter.filter(resultHistory.getResults()); // 저장된 결과값들을 filter 메서드에 전달하여 실행
                                 break;
                             default:
                                 System.out.println("올바른 입력 값이 아닙니다.");

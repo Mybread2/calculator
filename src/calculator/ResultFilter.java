@@ -5,11 +5,11 @@ import java.util.Scanner;
 
 @FunctionalInterface
 
-public interface ResultFilter {
+public interface ResultFilter { //
 
-        void filter(List<Double> results);
+        void filter(List<Double> results); // ResultFilter 라는 함수형 인터페이스의 추상 메서드 선언부
 
-        ResultFilter resultFilter = (results) -> {
+        ResultFilter resultFilter = (results) -> { // filter(List<Double> results) 메서드의 구현체 역할을 하는 부분
         Scanner sc = new Scanner(System.in);
         System.out.print("기준값을 입력하세요: ");
         double filterNumber = sc.nextDouble();
