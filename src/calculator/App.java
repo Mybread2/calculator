@@ -26,15 +26,13 @@ public class App {
                 sc.nextLine(); // 버퍼 비우기
 
                 // 유효한 연산자인지 확인
-                OperationExecutor.Operator op = OperationExecutor.Operator.fromSymbol(operator);
-                if (op == null) {
-                    System.out.println("지원하지 않는 연산자입니다. 다시 입력해주세요.");
-                    continue;
+                try {
+                    double result = executor.execute(inputNumber1, inputNumber2, operator);
+                    System.out.println("계산 결과 : " + result);
+                    break;
+                } catch (IllegalArgumentException e) {
+                    System.out.println(e.getMessage());
                 }
-
-                double result = executor.execute(inputNumber1, inputNumber2, operator);
-                System.out.println("계산 결과 : " + result);
-                break;
             }
 
             List<Double> newResults = resultHistory.getResults(); // 계산 후 업데이트된 결과 리스트 가져오기

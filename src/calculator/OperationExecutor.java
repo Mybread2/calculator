@@ -48,7 +48,7 @@ public class OperationExecutor<T extends Number> {
                     return op;
                 }
             }
-            return null;
+            throw new IllegalArgumentException("지원하지 않는 연산자입니다.");
         }
     }
     

@@ -26,4 +26,5 @@ public interface ResultFilter { //
             System.out.println();
         }
     };
+
 }
