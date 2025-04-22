@@ -1,7 +1,6 @@
 # Java 사칙연산 계산기 프로젝트
  
  Java의 객체지향적 설계와 함수형 프로그래밍 요소(`Optional`, `@FunctionalInterface`, `enum`, `lambda`)를 활용한 사칙연산 계산기입니다.  
- 사칙연산, 결과 이력 관리, 결과 필터링 기능 등을 제공합니다.
  
  ---
  
