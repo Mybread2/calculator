@@ -1,10 +1,10 @@
 package newCalculator;
 
-public class RemoveResult {
+public class RemoveFirstResult {
 
-    Calculation calculation;
+    CalculateOperations calculation;
 
-    public RemoveResult(Calculation calculation) {
+    public RemoveFirstResult(CalculateOperations calculation) {
         this.calculation = calculation;
     }
 

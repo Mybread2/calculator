@@ -3,14 +3,14 @@ package newCalculator;
 public class Main {
     public static void main(String[] args) {
 
-        InputData inputData = new InputData();
-        Calculation calculation = new Calculation(inputData);
-        CheckResults checkResults = new CheckResults();
-        RemoveResult removeResult = new RemoveResult(calculation);
-        Command command = new Command(calculation, checkResults, removeResult);
+        InputNumberAndOperator NumbersAndOperator = new InputNumberAndOperator();
+        CalculateOperations calculation = new CalculateOperations(NumbersAndOperator);
+        CheckResults check = new CheckResults();
+        RemoveFirstResult remove = new RemoveFirstResult(calculation);
+        CommandVariousFunctions command = new CommandVariousFunctions(calculation, check, remove);
 
         while (true) {
-            inputData.inputNumber();
+            NumbersAndOperator.inputNumber();
 
             calculation.calculate();
 

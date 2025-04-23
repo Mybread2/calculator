@@ -2,14 +2,14 @@ package newCalculator;
 
 import java.util.Scanner;
 
-public class Command {
+public class CommandVariousFunctions {
 
     Scanner sc = new Scanner(System.in);
     CheckResults checkResults;
-    Calculation calculation;
-    RemoveResult removeResult;
+    CalculateOperations calculation;
+    RemoveFirstResult removeResult;
 
-    public Command(Calculation calculation, CheckResults checkResults, RemoveResult removeResult) {
+    public CommandVariousFunctions(CalculateOperations calculation, CheckResults checkResults, RemoveFirstResult removeResult) {
         this.checkResults = checkResults;
         this.calculation = calculation;
         this.removeResult = removeResult;
