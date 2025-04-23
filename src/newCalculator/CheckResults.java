@@ -4,11 +4,11 @@ import java.util.List;
 import java.util.Scanner;
 
 public class CheckResults {
-
+    
     Scanner sc = new Scanner(System.in);
 
     public void filter(List<Double> results){
-        System.out.println("기준 값을 입력하세요: ");
+        System.out.print("기준 값을 입력하세요: ");
         double filterNumber = sc.nextDouble();
 
         List<Double> filtered = results.stream()

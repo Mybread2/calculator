@@ -10,19 +10,20 @@ public class InputData {
 
     public void inputNumber() {
 
-            System.out.println("첫 번째 실수를 입력하세요.");
+            System.out.print("첫 번째 실수를 입력하세요: ");
             this.n1 = sc.nextDouble();
 
-            System.out.println("두 번째 실수를 입력하세요.");
+            System.out.print("두 번째 실수를 입력하세요: ");
             this.n2 = sc.nextDouble();
 
-            System.out.println("사칙 연산자를 입력하세요.");
+            System.out.print("사칙 연산자를 입력하세요: ");
 
             while (true) {
                 char inputOperator = sc.next().charAt(0);
 
                 try {
-                operator = Operators.Operator.fromsymbol(inputOperator);
+                operator = Operators.Operator.fromSymbol(inputOperator);
+
                 break;
             } catch (IllegalArgumentException e){
                 System.out.println(e.getMessage());

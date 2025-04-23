@@ -13,7 +13,7 @@ public class Operators {
                 return n1 - n2;
             }
         },
-        MUTIPLY('*'){
+        MULTIPLE('*'){
             public double apply(double n1, double n2){
                 return n1 * n2;
             }
@@ -21,7 +21,7 @@ public class Operators {
         DIVIDE('/'){
             public double apply(double n1, double n2){
                 if (n2 == 0){
-                    throw new IllegalArgumentException("0으로 나눌 수 없습니다.");
+                    throw new ArithmeticException("0으로 나눌 수 없습니다.");
                 }
                 return n1 / n2 ;
             }
@@ -35,7 +35,7 @@ public class Operators {
 
         public abstract double apply(double n1, double n2);
 
-        public static Operator fromsymbol(char symbol){
+        public static Operator fromSymbol(char symbol){
             for (Operator op : Operator.values()){
                 if (op.symbol == symbol){
                     return op;

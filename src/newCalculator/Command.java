@@ -18,7 +18,7 @@ public class Command {
 
     public void command(){
         while (true) {
-            System.out.println("추가적인 계산을 원하시면 '계산'을, 특정 값 이상의 데이터 조회를 원하시면 '조회'를, 종료를 원하시면 '종료'를 입력해주세요.");
+            System.out.println("추가적인 계산을 원하시면 '계산'을, 특정 값 이상의 데이터 조회를 원하시면 '조회'를, 가장 오래된 값 삭제를 원하시면 '삭제'를, 종료를 원하시면 '종료'를 입력해주세요.");
             String input = sc.nextLine();
 
             switch (input){
